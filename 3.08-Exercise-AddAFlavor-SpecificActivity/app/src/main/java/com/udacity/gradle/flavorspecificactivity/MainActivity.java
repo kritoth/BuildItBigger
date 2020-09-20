@@ -1,8 +1,10 @@
 package com.udacity.gradle.flavorspecificactivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +50,21 @@ public class MainActivity extends AppCompatActivity {
         CharSequence text = this.getString(R.string.toast_text);
         int duration = Toast.LENGTH_LONG;
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+        if(BuildConfig.FLAVOR.equals("paid")) {
+            Intent intent = null;
+            try {
+                intent = new Intent(this, Class.forName("com.udacity.gradle.flavorspecificactivity.paid.JokeActivity"));
+                intent.putExtra("joke", "This is a paid joke, HA-HA-HA!");
+            } catch (ClassNotFoundException e) {
+                Log.e(TAG, "Class not found for paid flavor");
+            }
 
+            startActivity(intent);
+        }
+        else if(BuildConfig.FLAVOR.equals("free")){
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
 
     }
 }
