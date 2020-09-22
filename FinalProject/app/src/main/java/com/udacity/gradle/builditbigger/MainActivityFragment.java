@@ -11,6 +11,9 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.tiansirk.joketeller.JokeTeller;
 import com.udacity.gradle.builditbigger.databinding.FragmentMainBinding;
 
 import java.util.ArrayList;
@@ -36,12 +39,17 @@ public class MainActivityFragment extends Fragment {
         View root = binding.getRoot();
 
         mJokeView = binding.instructionsTextView;
-
         mAdView = binding.adView;
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
         // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device." -DEPRECATED
         // Use RequestConfiguration builder to add test devices
+        MobileAds.initialize(getActivity(), new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+
+            }
+        });
         List<String> testDevices = new ArrayList<>();
         testDevices.add(AdRequest.DEVICE_ID_EMULATOR);
         RequestConfiguration requestConfiguration
