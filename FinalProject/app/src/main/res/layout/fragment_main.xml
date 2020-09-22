@@ -13,13 +13,15 @@
         android:id="@+id/instructions_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:text="@string/instructions" />
 
-    <Button
+    <TextView
+        android:id="@+id/button_tell_me_joke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
         android:layout_below="@+id/instructions_text_view"
-        android:onClick="tellJoke"
         android:text="@string/button_text" />
 
     <com.google.android.gms.ads.AdView

@@ -27,6 +27,7 @@ public class MainActivityFragment extends Fragment {
 
     private FragmentMainBinding binding;
     private TextView mJokeView;
+    private TextView mButton;
     private AdView mAdView;
 
     public MainActivityFragment() {
@@ -40,6 +41,9 @@ public class MainActivityFragment extends Fragment {
 
         mJokeView = binding.instructionsTextView;
         mAdView = binding.adView;
+        mButton = binding.buttonTellMeJoke;
+
+        setupClickListener();
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
         // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device." -DEPRECATED
@@ -62,5 +66,19 @@ public class MainActivityFragment extends Fragment {
                 .build();
         mAdView.loadAd(adRequest);
         return root;
+    }
+
+    private void setupClickListener(){
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tellJoke(view);
+            }
+        });
+    }
+
+    private void tellJoke(View view){
+        JokeTeller jokeTeller = new JokeTeller();
+        mJokeView.setText(jokeTeller.getJoke());
     }
 }
