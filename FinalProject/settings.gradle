@@ -1,3 +1,0 @@
-include ':libraries:jokedisplayer'
-include ':libraries:joketeller'
-include ':app', ':backend'

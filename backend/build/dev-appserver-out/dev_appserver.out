@@ -1,0 +1,57 @@
+szept. 23, 2020 7:21:00 DU com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\bf8ezm\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+2020-09-23 19:21:00.204:INFO::main: Logging initialized @513ms to org.eclipse.jetty.util.log.StdErrLog
+2020-09-23 19:21:00.257:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+szept. 23, 2020 5:21:00 DU com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend) is not equal to your 
+web application root (C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+2020-09-23 19:21:00.574:INFO:oejs.Server:main: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_242-release-1644-b01
+2020-09-23 19:21:01.053:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@49c90a9c{/,file:///C:/Users/bf8ezm/AndroidStudioProjects/ud867/FinalProject/backend/build/exploded-backend/,AVAILABLE}{C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend}
+2020-09-23 19:21:01.053:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2020-09-23 19:21:01.053:INFO:oejs.session:main: node0 Scavenging disabled
+2020-09-23 19:21:01.060:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@185d8b6{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-09-23 19:21:01.075:INFO:oejs.Server:main: Started @1383ms
+szept. 23, 2020 5:21:01 DU com.google.appengine.tools.development.AbstractModule startup
+INFO: Module instance default is running at http://localhost:8080/
+szept. 23, 2020 5:21:01 DU com.google.appengine.tools.development.AbstractModule startup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+szept. 23, 2020 7:21:01 DU com.google.appengine.tools.development.DevAppServerImpl doStart
+INFO: Dev App Server is now running
+szept. 23, 2020 7:21:41 DU com.google.appengine.tools.development.jetty9.LocalResourceFileServlet doGet
+WARNING: No file found for: /favicon.ico
+szept. 23, 2020 7:34:14 DU com.google.appengine.tools.development.jetty9.JettyContainerService$ScannerListener fileChanged
+INFO: C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml updated, reloading the webapp!
+2020-09-23 19:34:14.720:INFO:oejsh.ContextHandler:Scanner-0: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@49c90a9c{/,file:///C:/Users/bf8ezm/AndroidStudioProjects/ud867/FinalProject/backend/build/exploded-backend/,UNAVAILABLE}{C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend}
+2020-09-23 19:34:14.730:INFO:oejs.AbstractConnector:Scanner-0: Stopped NetworkTrafficSelectChannelConnector@185d8b6{HTTP/1.1, (http/1.1)}{localhost:8080}
+szept. 23, 2020 7:34:14 DU com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\bf8ezm\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+szept. 23, 2020 7:34:14 DU com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend) is not equal to your 
+web application root (C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+2020-09-23 19:34:14.841:INFO:oejs.Server:Scanner-0: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_242-release-1644-b01
+2020-09-23 19:34:15.155:INFO:oejsh.ContextHandler:Scanner-0: Started c.g.a.t.d.j.DevAppEngineWebAppContext@55be04ea{/,file:///C:/Users/bf8ezm/AndroidStudioProjects/ud867/FinalProject/backend/build/exploded-backend/,AVAILABLE}{C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend}
+2020-09-23 19:34:15.156:INFO:oejs.session:Scanner-0: DefaultSessionIdManager workerName=node0
+2020-09-23 19:34:15.156:INFO:oejs.session:Scanner-0: node0 Scavenging disabled
+2020-09-23 19:34:15.168:INFO:oejs.AbstractConnector:Scanner-0: Started NetworkTrafficSelectChannelConnector@185d8b6{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-09-23 19:34:15.169:INFO:oejs.Server:Scanner-0: Started @795476ms
+szept. 23, 2020 8:01:05 DU com.google.appengine.tools.development.jetty9.JettyContainerService$ScannerListener fileChanged
+INFO: C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml updated, reloading the webapp!
+2020-09-23 20:01:05.998:INFO:oejsh.ContextHandler:Scanner-0: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@55be04ea{/,file:///C:/Users/bf8ezm/AndroidStudioProjects/ud867/FinalProject/backend/build/exploded-backend/,UNAVAILABLE}{C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend}
+2020-09-23 20:01:06.002:INFO:oejs.AbstractConnector:Scanner-0: Stopped NetworkTrafficSelectChannelConnector@185d8b6{HTTP/1.1, (http/1.1)}{localhost:8080}
+szept. 23, 2020 8:01:06 DU com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\bf8ezm\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+szept. 23, 2020 8:01:06 DU com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend) is not equal to your 
+web application root (C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+2020-09-23 20:01:06.026:INFO:oejs.Server:Scanner-0: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_242-release-1644-b01
+2020-09-23 20:01:06.169:INFO:oejsh.ContextHandler:Scanner-0: Started c.g.a.t.d.j.DevAppEngineWebAppContext@7b5f768a{/,file:///C:/Users/bf8ezm/AndroidStudioProjects/ud867/FinalProject/backend/build/exploded-backend/,AVAILABLE}{C:\Users\bf8ezm\AndroidStudioProjects\ud867\FinalProject\backend\build\exploded-backend}
+2020-09-23 20:01:06.170:INFO:oejs.session:Scanner-0: DefaultSessionIdManager workerName=node0
+2020-09-23 20:01:06.170:INFO:oejs.session:Scanner-0: node0 Scavenging disabled
+2020-09-23 20:01:06.175:INFO:oejs.AbstractConnector:Scanner-0: Started NetworkTrafficSelectChannelConnector@185d8b6{HTTP/1.1, (http/1.1)}{localhost:8080}
+2020-09-23 20:01:06.176:INFO:oejs.Server:Scanner-0: Started @2406483ms
