@@ -60,6 +60,8 @@ dependencies {
     implementation project(':libraries:joketeller')
     //Android library for joke displaying
     implementation project(':libraries:jokedisplayer')
+    //Endpoints
+    endpointsServer project(path: ':backend', configuration: 'endpoints')
 }
 //This is needed because of :lint errors were caused by the below to submodule in starter code
 configurations {
