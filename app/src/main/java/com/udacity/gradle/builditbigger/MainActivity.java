@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityFragm
 
     @Override
     public void onDataLoaded(String joke) {
-        Log.d(TAG, "Data loaded from AsyncTask");
+        Log.d(TAG, "Data loaded from AsyncTask: " + joke);
         sendJoke(joke);
     }
 
