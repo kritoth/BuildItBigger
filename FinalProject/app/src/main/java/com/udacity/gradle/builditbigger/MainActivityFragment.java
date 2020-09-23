@@ -1,7 +1,10 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +36,12 @@ public class MainActivityFragment extends Fragment {
     private TextView mJokeView;
     private TextView mButton;
     private AdView mAdView;
+
+    /** The interface that receives onClick messages */
+    public interface JokeButtonListener{
+        void onJokeButtonClicked();
+    }
+    JokeButtonListener listener;
 
     public MainActivityFragment() {
     }
@@ -72,22 +81,53 @@ public class MainActivityFragment extends Fragment {
         return root;
     }
 
+    /** When this fragment is attached to its host activity, ie {@link MainActivity} the listener interface is connected
+     * If not then an error exception is thrown to notify the developer.
+     * @param context
+     */
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if(context instanceof JokeButtonListener){
+            listener = (JokeButtonListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement JokeButtonListener");
+        }
+    }
+
+    /** Sets JokeButtonListener to the Button to communicate with host Activity*/
     private void setupClickListener(){
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //tellJoke();
-                sendJoke();
+                //sendJoke();
+                listener.onJokeButtonClicked();
             }
         });
     }
 
-    private void sendJoke(){
-        Intent activityIntent = new Intent(getContext(), JokeDisplayerActivity.class);
-        activityIntent.putExtra(INTENT_KEY_JOKE, packageJokes());
-        startActivity(activityIntent);
+    /** When this fragment is detached from the host, the listeners is set to null, to decouple. */
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener = null;
     }
 
+/*    @Override
+    public void onDataLoaded(String joke) {
+        sendJoke(joke);
+    }
+
+    private void sendJoke(String joke){
+        Intent activityIntent = new Intent(getContext(), JokeDisplayerActivity.class);
+        activityIntent.putExtra(INTENT_KEY_JOKE, joke);
+        startActivity(activityIntent);
+    }*/
+
+
+/*
     private String packageJokes(){
         JokeTeller jokeTeller = new JokeTeller();
         return jokeTeller.getJoke();
@@ -95,5 +135,6 @@ public class MainActivityFragment extends Fragment {
 
     private void tellJoke(){
         mJokeView.setText(packageJokes());
-    }
+    }*/
+
 }

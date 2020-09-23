@@ -31,4 +31,15 @@ public class MyEndpoint {
         return response;
     }
 
+    /** A simple endpoint method that tells a joke */
+    @ApiMethod(name = "tellJoke")
+    public MyBean tellJoke() {
+        JokeTeller jokeTeller = new JokeTeller();
+        String joke = jokeTeller.getJoke();
+
+        MyBean response = new MyBean();
+        response.setData(joke);
+
+        return response;
+    }
 }
