@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,11 +14,14 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.tiansirk.jokedisplayer.JokeDisplayerActivity;
 import com.tiansirk.joketeller.JokeTeller;
 import com.udacity.gradle.builditbigger.databinding.FragmentMainBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.tiansirk.jokedisplayer.JokeDisplayerActivity.INTENT_KEY_JOKE;
 
 
 /**
@@ -72,13 +76,24 @@ public class MainActivityFragment extends Fragment {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tellJoke(view);
+                //tellJoke();
+                sendJoke();
             }
         });
     }
 
-    private void tellJoke(View view){
+    private void sendJoke(){
+        Intent activityIntent = new Intent(getContext(), JokeDisplayerActivity.class);
+        activityIntent.putExtra(INTENT_KEY_JOKE, packageJokes());
+        startActivity(activityIntent);
+    }
+
+    private String packageJokes(){
         JokeTeller jokeTeller = new JokeTeller();
-        mJokeView.setText(jokeTeller.getJoke());
+        return jokeTeller.getJoke();
+    }
+
+    private void tellJoke(){
+        mJokeView.setText(packageJokes());
     }
 }
