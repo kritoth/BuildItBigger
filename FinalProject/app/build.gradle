@@ -31,7 +31,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    //Enable viewBinding
     buildFeatures {
         viewBinding true
     }
@@ -58,6 +58,8 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     //Java library for joke generating
     implementation project(':libraries:joketeller')
+    //Android library for joke displaying
+    implementation project(':libraries:jokedisplayer')
 }
 //This is needed because of :lint errors were caused by the below to submodule in starter code
 configurations {
