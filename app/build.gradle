@@ -63,7 +63,7 @@ dependencies {
     //Endpoints
     endpointsServer project(path: ':backend', configuration: 'endpoints')
 }
-//This is needed because of :lint errors were caused by the below to submodule in starter code
+//This is needed because of :lint errors were caused by the below two submodules in starter code
 configurations {
     all {
         exclude module: 'httpclient'

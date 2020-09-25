@@ -2,9 +2,7 @@ package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
-import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
@@ -17,12 +15,10 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
 
     public interface AsyncRespone { void onDataLoaded(String joke);}
     private AsyncRespone delegate = null;
-    private Context context;
 
     private static MyApi myApiService = null;
 
-    public EndpointsAsyncTask(Context context) {
-        this.context =  context;
+    public EndpointsAsyncTask(AsyncRespone context) {
         this.delegate = (AsyncRespone) context;
     }
 
@@ -36,6 +32,7 @@ public class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
                     // - turn off compression when running against local devappserver
                     //.setApplicationName(context.getString(R.string.app_name))
                     .setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                    //.setRootUrl("http://192.168.43.157:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
