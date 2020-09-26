@@ -1,7 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,20 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.tiansirk.jokedisplayer.JokeDisplayerActivity;
-import com.tiansirk.joketeller.JokeTeller;
 import com.udacity.gradle.builditbigger.databinding.FragmentMainBinding;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.tiansirk.jokedisplayer.JokeDisplayerActivity.INTENT_KEY_JOKE;
 
 
 /**
@@ -102,8 +88,8 @@ public class MainActivityFragment extends Fragment {
         Intent activityIntent = new Intent(getContext(), JokeDisplayerActivity.class);
         activityIntent.putExtra(INTENT_KEY_JOKE, joke);
         startActivity(activityIntent);
-    }*/
-
+    }
+*/
 
 /*
     private String packageJokes(){
@@ -113,6 +99,6 @@ public class MainActivityFragment extends Fragment {
 
     private void tellJoke(){
         mJokeView.setText(packageJokes());
-    }*/
-
+    }
+*/
 }
